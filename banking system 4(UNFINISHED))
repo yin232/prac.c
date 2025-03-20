@@ -1,0 +1,133 @@
+#include<stdio.h>
+
+int main(){
+    
+    int pin;
+    int menu;
+    int charge;
+    int myBalance;
+    int remaining;
+    int amount;
+    int choice;
+    //ask the user for their PIN number
+    printf("Enter your PIN number: ");
+    scanf("%d", &pin);
+    
+    //identify PIN number
+    //display choices if PIN is valid
+    //display user balance
+    if(pin == 12345) 
+    {
+        printf("\n1. My Balance\n2. My Savings\n3. Exit\n");
+        printf("\nSelect Choice: ");
+        scanf("%d", &menu);
+        
+        //display user balance
+        //ask user to select choice
+        if(menu == 1)
+        {
+            printf("\nMy Balance\n");
+            printf("9999999\n");
+            printf("\n1. Withraw\n2. Eject Card\n");
+            printf("\nSelect Choice: ");
+            scanf("%d", &myBalance);
+            
+            //confirm user charge will be deducted upon withdrawwal
+            //provide choices to the user
+            //identify selected choices
+            if(myBalance == 1)
+            {
+                printf("\nPHP 2 will be charge\n");
+                printf("\n1. Continue\n2. Back\n");
+                printf("\nSelect Choice: ");
+                scanf("%d", &charge);
+                
+                //ask user withdrawal amount
+                //calculate balance after withdrawal
+                //display result
+                //provide choices after withdrawal
+                //display balance after withdrawal
+                if(charge == 1)
+                {
+                    printf("\nEnter amount: ");
+                    scanf("%d", &amount);
+                    
+                    remaining = 9999999 - amount;
+                    printf("\nWithdraw Successful\n");
+                    printf("\n1. Eject Card\n2. Back\n3. Main menu\n");
+                    printf("\nSelect Choice: ");
+                    scanf("%d", &choice);
+                    printf("\nRemaining Balance: %d", remaining);
+                }
+                
+                //return user previous option
+                //this should apear before this statemant
+                else if(charge == 2)
+                {
+                    printf("\nMy Balance\n");
+                    printf("9999999\n");
+                    printf("\n1. Withraw\n2. Eject Card\n");
+                    printf("\nSelect Choice: ");
+                    scanf("%d", &myBalance);
+                }
+            }
+        }
+        //display user balance
+        //ask user to select choice
+        else if(menu == 2)
+        {
+            printf("\nMy Savings\n");
+            printf("9999999\n");
+            printf("\n1. Withraw\n2. Eject Card\n");
+            printf("\nSelect Choice: ");
+            scanf("%d", &myBalance);
+            
+            //confirm user charge will be deducted upon withdrawwal
+            //provide choices to the user
+            //identify selected choices
+            if(myBalance == 1)
+            {
+                printf("\nPHP 2 will be charge\n");
+                printf("\n1. Continue\n2. Back\n");
+                printf("\nSelect Choice: ");
+                scanf("%d", &charge);
+                
+                //ask user withdrawal amount
+                //calculate balance after withdrawal
+                //display result
+                //provide choices after withdrawal
+                //display balance after withdrawal
+                if(charge == 1)
+                {
+                    printf("\nEnter amount: ");
+                    scanf("%d", &amount);
+                    
+                    remaining = 9999999 - amount;
+                    printf("\nWithdraw Successful\n");
+                    printf("\n1. Eject Card\n2. Back\n3. Main menu\n");
+                    printf("\nSelect Choice: ");
+                    scanf("%d", &choice);
+                    printf("\nRemaining Balance: %d", remaining);
+                }
+                //return user previous option
+                //this should apear before this statemant
+                else if(charge == 2)
+                {
+                    printf("\nMy Balance\n");
+                    printf("9999999\n");
+                    printf("\n1. Withraw\n2. Eject Card\n");
+                    printf("\nSelect Choice: ");
+                    scanf("%d", &myBalance);
+                }
+            }
+        }
+        else if(menu == 3)
+        {
+            printf("Exiting...");
+        }
+    }else printf("\nInvalid PIN number");
+    
+    
+    
+    return 0;
+}
